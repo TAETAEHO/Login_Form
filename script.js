@@ -1,10 +1,10 @@
 //아이디, 성공메시지, 실패메시지, 비밀번호, 비밀번호 확인, 비밀번호 확인 메시지를 가지고 온다.
-const InputUsername = document.querySelector('#username');
+const inputUsername = document.querySelector('#username');
 const failureMessage = document.querySelector('.failure-message');
 const successMessage = document.querySelector('.success-message');
 const checkValidId = document.querySelector('.id-button');
-const InputPassword = document.querySelector('#password');
-const InputPasswordRetype = document.querySelector('#password-retype');
+const inputPassword = document.querySelector('#password');
+const inputPasswordRetype = document.querySelector('#password-retype');
 const missmatchMessage = document.querySelector('.missmatch-password');
 
 //아이디 길이가 4자리 이상이면 성공메시지, 그 외에는 실패 메시지
@@ -29,9 +29,9 @@ function isMatched(password1, password2) {
 }
 
 checkValidId.onclick = () => {
-    isMorethan4Length(InputUsername.value);
+    isMorethan4Length(inputUsername.value);
 }
 
-InputPasswordRetype.onkeyup = () => {
-    isMatched(InputPassword.value, InputPasswordRetype.value);
+inputPasswordRetype.onkeyup = () => {
+    isMatched(inputPassword.value, inputPasswordRetype.value);
 }
