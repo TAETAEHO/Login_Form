@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태호의 로그인페이지</title>
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+<body>
+    <header id="header">
+        <span>태호마켓 회원가입</span>
+        <div>
+            <button class="header-button">Sign up</button>
+            <button class="header-button">Login</button>
+        </div>
+    </header>
+    <form class="signup">
+        <div class="content">
+            <span>아이디</span>
+            <input id="username" type="text" placeholder="아이디는 4자리 이상입니다." />
+            <button class="id-button">사용가능 확인</button>
+            <div class="failure-message hide">아이디는 4자리 이상입니다.</div>
+            <div class="success-message hide">사용 가능한 아이디입니다.</div>
+        </div>
+
+        <div class="content">
+            <span>비밀번호</span>
+            <input id="password" type="password" />
+        </div>
+
+        <div class="content">
+            <span>비밀번호 확인</span>
+            <input id="password-retype" type="password" />
+            <div class="missmatch-password hide">비밀번호가 일치하지 않습니다.</div>
+        </div>
+
+        <div>
+            <button class="login-button">Login</button>
+        </div>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
