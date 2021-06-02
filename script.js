@@ -4,6 +4,7 @@ const failureMessage = document.querySelector('.failure-message');
 const failrueOtherMessage = document.querySelector('.failure-message2');
 const successMessage = document.querySelector('.success-message');
 const inputPassword = document.querySelector('#password');
+const strongPasswordMessage = document.querySelector('.strong-password');
 const inputPasswordRetype = document.querySelector('#password-retype');
 const missmatchMessage = document.querySelector('.missmatch-password');
 
@@ -12,9 +13,14 @@ inputUsername.onkeyup = () => {
     isMorethan4Length(inputUsername.value);
 }
 
+inputPassword.onkeyup = () => {
+    strongPassword(inputPassword.value);
+}
+
 inputPasswordRetype.onkeyup = () => {
     isMatched(inputPassword.value, inputPasswordRetype.value);
 }
+
 
 //아이디 길이가 4자리 이상이면 성공메시지, 그 외에는 실패 메시지
 function isMorethan4Length(value) {
@@ -36,6 +42,15 @@ function onlyNumberAndEnglish(str) {
         failrueOtherMessage.classList.remove('hide');
     }
   }
+
+  function strongPassword(str) {
+    if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(str)) {
+        strongPasswordMessage.classList.add('hide');
+    } else {
+        strongPasswordMessage.classList.remove('hide');
+    }
+  }
+
 
 function isMatched(password1, password2) {
     if(password1 === password2) {

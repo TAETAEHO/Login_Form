@@ -70,3 +70,14 @@ input {
   cursor: pointer;
   color: white;
 }
+
+.success-message {
+  color: green;
+}
+
+.failure-message,
+.failure-message2,
+.strong-password,
+.missmatch-password {
+  color: red;
+}
